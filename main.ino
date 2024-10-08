@@ -40,7 +40,7 @@ void loop() {
 }
 
 void inputParse(String input){
-  for(int i = 0; i <input.length(); i++){
+  for(int i =0; i <input.length(); i++){
     char ch = input.charAt(i);
     operation(ch);
   }
@@ -57,4 +57,47 @@ void operation(char ch){
   BraccioRobot.moveToPosition(pos.set(50,  105, 0, 0, 180,  50), 50);
   delay(1000);
   }
+  else if (ch = '2'){
+
+  }
+  else if (ch = '3'){
+
+  }
+  else if (ch = '4'){
+
+  }
+  else if (ch = '5'){
+
+  }
+  else if (ch = '6'){
+
+  }
+  else if (ch = '7'){
+
+  }
+  else if (ch = '8'){
+
+  }
+  else if (ch = '9'){
+
+  }
+  else if (ch = '0'){
+
+  }
+  else if (ch = '+'){
+
+  }
+  else if (ch = '-'){
+
+  }
+  else if (ch = '*'){
+
+  }
+  else if (ch = '/'){
+
+  }
+  else if (ch = '='){
+
+  }
+
 }
