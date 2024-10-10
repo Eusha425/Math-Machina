@@ -56,50 +56,74 @@ void operation(char ch){
   delay(1000);
   BraccioRobot.moveToPosition(pos.set(47,  33, 80, 30, 180,  70), 50);
   delay(1000);
+  // back to default
   BraccioRobot.moveToPosition(pos.set(90,  165, 0, 0, 180,  50), 50);
   delay(1000);
   }
-  else if (ch = '2'){
+  else if (ch == '2'){
+  // default position
+  BraccioRobot.moveToPosition(pos.set(90,  165, 0, 0, 180,  50), 50);
+  delay(1000);
+  // start movement towards 2
+  BraccioRobot.moveToPosition(pos.set(57,  165, 0, 0, 180,  50), 50);
+  delay(1000);
+  BraccioRobot.moveToPosition(pos.set(57,  37, 80, 25, 180,  70), 50);
+  delay(1000);
+  // back to default
+  BraccioRobot.moveToPosition(pos.set(90,  165, 0, 0, 180,  50), 50);
+  delay(1000);
+  }
+  else if (ch == '3'){
+  // default position
+  BraccioRobot.moveToPosition(pos.set(90,  165, 0, 0, 180,  50), 50);
+  delay(1000);
+  // start movement towards 3
+  BraccioRobot.moveToPosition(pos.set(70,  165, 0, 0, 180,  50), 50);
+  delay(1000);
+  BraccioRobot.moveToPosition(pos.set(70,  40, 80, 20, 180,  70), 50);
+  delay(1000);
+  // back to default
+  BraccioRobot.moveToPosition(pos.set(90,  165, 0, 0, 180,  50), 50);
+  delay(1000);
+  }
+  else if (ch == '4'){
 
   }
-  else if (ch = '3'){
+  else if (ch == '5'){
 
   }
-  else if (ch = '4'){
+  else if (ch == '6'){
 
   }
-  else if (ch = '5'){
+  else if (ch == '7'){
 
   }
-  else if (ch = '6'){
+  else if (ch == '8'){
 
   }
-  else if (ch = '7'){
+  else if (ch == '9'){
 
   }
-  else if (ch = '8'){
+  else if (ch == '0'){
 
   }
-  else if (ch = '9'){
+  else if (ch == '+'){
 
   }
-  else if (ch = '0'){
+  else if (ch == '-'){
 
   }
-  else if (ch = '+'){
+  else if (ch == '*'){
 
   }
-  else if (ch = '-'){
+  else if (ch == '/'){
 
   }
-  else if (ch = '*'){
+  else if (ch == '='){
 
   }
-  else if (ch = '/'){
-
-  }
-  else if (ch = '='){
-
+  else{
+    Serial.println("Invalid Input");
   }
 
 }
