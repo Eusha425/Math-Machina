@@ -40,7 +40,7 @@ void loop() {
 }
 
 void inputParse(String input){
-  for(int i =0; i <input.length(); i++){
+  for(int i = 0; i <input.length(); i++){
     char ch = input.charAt(i);
     operation(ch);
   }
@@ -48,13 +48,15 @@ void inputParse(String input){
 
 void operation(char ch){
   if (ch == '1'){
-    // default position
+  // default position
   BraccioRobot.moveToPosition(pos.set(90,  165, 0, 0, 180,  50), 50);
   delay(1000);
   // start movement towards 1
   BraccioRobot.moveToPosition(pos.set(50,  165, 0, 0, 180,  50), 50);
   delay(1000);
-  BraccioRobot.moveToPosition(pos.set(50,  105, 0, 0, 180,  50), 50);
+  BraccioRobot.moveToPosition(pos.set(47,  33, 80, 30, 180,  70), 50);
+  delay(1000);
+  BraccioRobot.moveToPosition(pos.set(90,  165, 0, 0, 180,  50), 50);
   delay(1000);
   }
   else if (ch = '2'){
