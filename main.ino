@@ -87,13 +87,43 @@ void operation(char ch){
   delay(1000);
   }
   else if (ch == '4'){
-
+    // default position
+  BraccioRobot.moveToPosition(pos.set(90,  165, 0, 0, 180,  50), 50);
+  delay(1000);
+  // start movement towards 4
+  BraccioRobot.moveToPosition(pos.set(50,  165, 0, 0, 180,  50), 50);
+  delay(1000);
+  BraccioRobot.moveToPosition(pos.set(45,  51, 55, 25, 180,  70), 50);
+  delay(1000);
+  // back to default
+  BraccioRobot.moveToPosition(pos.set(90,  165, 0, 0, 180,  50), 50);
+  delay(1000);
   }
   else if (ch == '5'){
-
+  // default position
+  BraccioRobot.moveToPosition(pos.set(90,  165, 0, 0, 180,  50), 50);
+  delay(1000);
+  // start movement towards 5
+  BraccioRobot.moveToPosition(pos.set(57,  165, 0, 0, 180,  50), 50);
+  delay(1000);
+  BraccioRobot.moveToPosition(pos.set(60,  53, 53, 25, 180,  70), 50);
+  delay(1000);
+  // back to default
+  BraccioRobot.moveToPosition(pos.set(90,  165, 0, 0, 180,  50), 50);
+  delay(1000);
   }
   else if (ch == '6'){
-
+  // default position
+  BraccioRobot.moveToPosition(pos.set(90,  165, 0, 0, 180,  50), 50);
+  delay(1000);
+  // start movement towards 3
+  BraccioRobot.moveToPosition(pos.set(70,  165, 0, 0, 180,  50), 50);
+  delay(1000);
+  BraccioRobot.moveToPosition(pos.set(70,  50, 58, 21, 180,  70), 50);
+  delay(1000);
+  // back to default
+  BraccioRobot.moveToPosition(pos.set(90,  165, 0, 0, 180,  50), 50);
+  delay(1000);
   }
   else if (ch == '7'){
 
