@@ -17,38 +17,52 @@ void setup() {
 void loop() {
   // Check if there's input available
   if (Serial.available() > 0) {
-    String firstNum = Serial.readStringUntil('\n');
-    firstNum.trim(); // Remove any whitespace
+    String firstNum = getValidInput("Enter First num");
+    char op = getOperationInput();
+    String secondNum = getValidInput("\nEnter the second number: ");
+
+    // Print the captured values
+    inputParse(firstNum);
+    Serial.println(firstNum);
+    operation(op);
+    Serial.println(op);
+    inputParse(secondNum);
+    Serial.println(secondNum);
+    Serial.println("Enter First num: ");
+  }
+}
+
+String getValidInput(String prompt) {
+  String input;
+  while (true) {
+    Serial.println(prompt);
+    while (Serial.available() == 0) {} // Wait for user input 
+
+    input = Serial.readStringUntil('\n');
+    input.trim(); // Remove any whitespace
     
-    if (checkInputSize(firstNum)){
-      inputParse(firstNum);
-    }
-    else{
+    if (checkInputSize(input)) {
+      return input; // Return valid input
+    } else {
       Serial.println("Number needs to be within 2 digits!!!");
     }
+  }
+}
 
+char getOperationInput() {
+  char operation;
+  while (true) {
     Serial.println("Select the operation (+, -, *, /):");  
     while (Serial.available() == 0) {} // Wait for user input 
 
-    char operation = Serial.readStringUntil('\n')[0];
+    operation = Serial.readStringUntil('\n')[0];
 
-    Serial.println("Enter the second number:");  
-    while (Serial.available() == 0) {} // Wait for user input 
-
-    String secondNum = Serial.readStringUntil('\n');
-    secondNum.trim(); 
-    if (checkInputSize(secondNum)){
-      inputParse(secondNum);
+    // Check if the operation is valid
+    if (operation == '+' || operation == '-' || operation == '*' || operation == '/') {
+      return operation; // Return valid operation
+    } else {
+      Serial.println("Invalid operation! Please enter (+, -, *, /):");
     }
-    else{
-      Serial.println("Number needs to be within 2 digits!!!");
-    }
-    
-    // Print the captured values
-    Serial.println(firstNum);
-    Serial.println(operation);
-    Serial.println(secondNum);
-    Serial.println("Enter First num: ");
   }
 }
 
