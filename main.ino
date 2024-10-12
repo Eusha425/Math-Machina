@@ -28,7 +28,32 @@ void loop() {
     Serial.println(op);
     inputParse(secondNum);
     Serial.println(secondNum);
+    int result = performCalculation(firstNum, op, secondNum);
+    operation('=');
+    inputParse(String(result));
+    Serial.println(result);
     Serial.println("Enter First num: ");
+  }
+}
+
+int performCalculation(String firstNum, char op, String secondNum){
+  int num1 = firstNum.toInt();
+  int num2 = secondNum.toInt();
+
+  switch(op){
+    case '+':
+    return num1+num2;
+    case '-':
+    return num1-num2;
+    case '*':
+    return num1*num2;
+    case '/':
+    if(num2 == 0){
+      Serial.println("cannot divide by zero");
+    }
+    else{
+      return int(num1/num2);
+    }
   }
 }
 
