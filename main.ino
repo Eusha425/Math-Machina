@@ -20,7 +20,14 @@ void loop() {
     String firstNum = Serial.readStringUntil('\n');
     firstNum.trim(); // Remove any whitespace
     
-    Serial.println("Select the operation (+, -, *, /):"); // Step 2: Wait for the operation 
+    if (checkInputSize(firstNum)){
+      inputParse(firstNum);
+    }
+    else{
+      Serial.println("Number needs to be within 2 digits!!!");
+    }
+
+    Serial.println("Select the operation (+, -, *, /):");  
     while (Serial.available() == 0) {} // Wait for user input 
 
     char operation = Serial.readStringUntil('\n')[0];
@@ -30,7 +37,13 @@ void loop() {
 
     String secondNum = Serial.readStringUntil('\n');
     secondNum.trim(); 
-    inputParse(firstNum);
+    if (checkInputSize(secondNum)){
+      inputParse(secondNum);
+    }
+    else{
+      Serial.println("Number needs to be within 2 digits!!!");
+    }
+    
     // Print the captured values
     Serial.println(firstNum);
     Serial.println(operation);
@@ -39,10 +52,27 @@ void loop() {
   }
 }
 
+bool checkInputSize(String input){
+  int value = input.toInt();
+  if(value > 99)
+  {
+    return false;
+  }
+  else{
+    return true;
+  }
+}
+
 void inputParse(String input){
   for(int i = 0; i <input.length(); i++){
     char ch = input.charAt(i);
-    operation(ch);
+    if(isDigit(ch)){
+      operation(ch);
+    }
+    else{
+      Serial.println("Invalid Input!!!");
+    }
+    
   }
 }
 
