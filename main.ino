@@ -50,6 +50,7 @@ int performCalculation(String firstNum, char op, String secondNum){
     case '/':
     if(num2 == 0){
       Serial.println("cannot divide by zero");
+      return 0;
     }
     else{
       return int(num1/num2);
