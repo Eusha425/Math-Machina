@@ -217,10 +217,31 @@ void operation(char ch){
   delay(1000);
   }
   else if (ch == '/'){
+    // default position
+  BraccioRobot.moveToPosition(pos.set(90,  165, 0, 0, 180,  50), 50);
+  delay(1000);
+  // start movement towards /
+  BraccioRobot.moveToPosition(pos.set(57,  165, 0, 0, 180,  50), 50);
+  delay(1000);
+  BraccioRobot.moveToPosition(pos.set(60,  87, 15, 7, 180,  70), 50);
+  delay(1000);
+  // back to default
+  BraccioRobot.moveToPosition(pos.set(90,  165, 0, 0, 180,  50), 50);
+  delay(1000);
 
   }
   else if (ch == '='){
-
+  // default position
+  BraccioRobot.moveToPosition(pos.set(90,  165, 0, 0, 180,  50), 50);
+  delay(1000);
+  // start movement towards -
+  BraccioRobot.moveToPosition(pos.set(78,  165, 0, 0, 180,  50), 50);
+  delay(1000);
+  BraccioRobot.moveToPosition(pos.set(78,  87, 15, 10, 180,  70), 50);
+  delay(1000);
+  // back to default
+  BraccioRobot.moveToPosition(pos.set(90,  165, 0, 0, 180,  50), 50);
+  delay(1000);
   }
   else{
     Serial.println("Invalid Input");
