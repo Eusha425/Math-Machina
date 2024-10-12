@@ -19,7 +19,7 @@ void loop() {
   if (Serial.available() > 0) {
     String firstNum = getValidInput("Enter First num");
     char op = getOperationInput();
-    String secondNum = getValidInput("\nEnter the second number: ");
+    String secondNum = getValidInput("Enter the second number: ");
 
     // Print the captured values
     inputParse(firstNum);
