@@ -94,7 +94,7 @@ char getOperationInput() {
 
 bool checkInputSize(String input){
   int value = input.toInt();
-  if(value > 99)
+  if(value > 99 || value < -99)
   {
     return false;
   }
