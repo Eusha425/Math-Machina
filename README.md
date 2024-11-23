@@ -98,7 +98,7 @@ Result: Robot presses "1", "0", "8"
 - Division by zero protection
 
 ## Documentation
-For detailed system design, implementation details, and analysis, refer to the project report (PDF) in the repository.
+For detailed system design, implementation details, and analysis, refer to the project report [(PDF)](https://github.com/Eusha425/Math-Machina/blob/main/Project%20Report.pdf) in the repository.
 
 ## License
 This project is licensed under the MIT License - see [LICENSE.md](https://github.com/Eusha425/Math-Machina/blob/main/LICENSE) for details.
