@@ -101,4 +101,4 @@ Result: Robot presses "1", "0", "8"
 For detailed system design, implementation details, and analysis, refer to the project report (PDF) in the repository.
 
 ## License
-This project is licensed under the MIT License - see [LICENSE.md](LICENSE.md) for details.
+This project is licensed under the MIT License - see [LICENSE.md](https://github.com/Eusha425/Math-Machina/blob/main/LICENSE) for details.
