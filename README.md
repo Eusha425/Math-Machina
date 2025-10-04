@@ -1,5 +1,3 @@
-# Robotic Calculator Project
-
 ## Overview
 The Robotic Calculator project controls a robotic arm to simulate a calculator by physically pressing buttons to perform mathematical operations. Users input numbers and operators through the Serial Monitor, and the Braccio Robot executes the calculations by pressing the corresponding buttons on a calculator interface.
 
